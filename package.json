@@ -1,0 +1,27 @@
+{
+  "name": "cao-cli",
+  "version": "0.1.1",
+  "description": "cnm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hudichao/cao.git"
+  },
+  "keywords": [
+    "cnm"
+  ],
+  "author": "hudichao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hudichao/cao/issues"
+  },
+  "homepage": "https://github.com/hudichao/cao#readme",
+  "preferGlobal": true,
+  "bin": {
+    "cao": "index.js"
+  }
+
+}
