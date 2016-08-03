@@ -2,8 +2,12 @@
 var fs = require('fs');
 var os = require('os');
 
+
 function getUserHome() {
-  return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+    return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+}
+function clearTerminal() {
+    process.stdout.write('\033c');
 }
 
 var FILENAME = getUserHome() + '/.cao_data.json';
@@ -53,7 +57,7 @@ if (text) {
     });
 
     fs.writeFileSync(FILENAME, JSON.stringify(data), 'utf-8');
-
+    clearTerminal();
 }
 
 function getShowTime(unixTime) {
