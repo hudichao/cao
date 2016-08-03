@@ -63,7 +63,13 @@ if (text) {
 function getShowTime(unixTime) {
     try {
         var date = new Date(unixTime);
-        var showDate = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1 + '';
+        var day = date.getDate() + '';
+        var hour = date.getHours() + '';
+        var minutes = ('0' + date.getMinutes()).slice(-2);
+
+        var showDate =`${year}/${month}/${day} ${hour}:${minutes}`;
         // 补全到20字符
         var length = 20 - showDate.length;
         if (length > 0) {
