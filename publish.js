@@ -18,4 +18,5 @@ let command = `git add package.json && git commit -m \'update package.json versi
 execSync(command); 
 execSync('git tag ' + version);
 execSync('git push origin --tag');
+execSync('nrm use npm');
 execSync('npm publish');
